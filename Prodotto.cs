@@ -14,7 +14,7 @@ public class Prodotto
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
-        this.iva = Math.Round((prezzo * 22) / 100, 2); ;
+        this.iva = Math.Round((prezzo * 22) / 100, 2);
     }
 
     public string GetCodice()
