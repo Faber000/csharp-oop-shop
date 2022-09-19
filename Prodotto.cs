@@ -2,7 +2,7 @@
 
 public class Prodotto
 {
-    private int codice;
+    private string codice;
     private string nome;
     private string descrizione;
     private double prezzo;
@@ -10,14 +10,14 @@ public class Prodotto
 
     public Prodotto(string nome, string descrizione, double prezzo, double iva)
     {
-        this.codice = new Random().Next(100);
+        this.codice = Convert.ToString(new Random().Next(100));
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
         this.iva = iva;
     }
 
-    public int GetCodice()
+    public string GetCodice()
     {
         return codice;
     }
@@ -53,10 +53,19 @@ public class Prodotto
         return iva;
     }
 
-    public int GetCodiceLungo()
+    public string GetCodiceLungo()
     {
-        string cod = Convert.ToString(codice);
-        return Convert.ToInt32(cod.PadLeft(8,'0'));
+        string stringa = "";
+        int diff = 8 - codice.Length;
+        if (diff > 0)
+        {
+            for (int i = 0; i < diff; i++)
+            {
+                stringa = stringa + "0";
+            }
+        }
+        string codiceLungo = stringa + codice;
+        return codiceLungo;
     }
 
     public void SetNome(string nome)
