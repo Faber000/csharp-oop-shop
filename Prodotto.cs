@@ -8,13 +8,13 @@ public class Prodotto
     private double prezzo;
     private double iva;
 
-    public Prodotto(string nome, string descrizione, double prezzo, double iva)
+    public Prodotto(string nome, string descrizione, double prezzo)
     {
         this.codice = Convert.ToString(new Random().Next(100));
         this.nome = nome;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
-        this.iva = iva;
+        this.iva = (prezzo*22)/100;
     }
 
     public string GetCodice()
