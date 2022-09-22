@@ -19,7 +19,7 @@ public class Product
 
     public virtual string GetFullName()
     {
-        string fullName = Name + "-" + Id;
+        string fullName = Id + "-" + Name;
         return fullName;
     }
 }

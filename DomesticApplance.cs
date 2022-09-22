@@ -1,5 +1,4 @@
 ﻿
-
 public class DomesticAppliance : Product
 {
     public string Type { get; set; }
@@ -11,7 +10,7 @@ public class DomesticAppliance : Product
 
     public override string GetFullName()
     {
-        return base.GetFullName() + "Type: " + Type;
+        return base.GetFullName() + "\r\n Type: " + Type;
     }
 }
 

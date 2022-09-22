@@ -1,5 +1,4 @@
 ﻿
-
 public class CannedFood : Product
 {
     public double Weight { get; set; }
@@ -30,7 +29,7 @@ public class CannedFood : Product
 
     public override string GetFullName()
     {
-        return base.GetFullName() + "Weight: " + Weight + ", Type: " + Type;
+        return base.GetFullName() + "\r\n Weight: " + Weight + ", Type: " + Type;
     }
 }
 

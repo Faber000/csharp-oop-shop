@@ -3,7 +3,7 @@
 public class FruitBag : Product
 {
     public int FruitNumber { get; set; }
-    public double Weight { get; set; }
+    public double Weight { get; set; }  // in grams
 
     public FruitBag(string name, string description, double price, int fruitNumber, double weight) :base(name, description, price)
     {
@@ -37,9 +37,14 @@ public class FruitBag : Product
         }
     }
 
+    public void RemoveAllFruits()
+    {
+        FruitNumber = 0;
+    }
+
     public override string GetFullName()
     {
-        return base.GetFullName() + "Weight: " + Weight + ", Fruits number: " + FruitNumber;
+        return base.GetFullName() + "\r\n Weight: " + Weight + ", Fruits number: " + FruitNumber;
     }
 }
 

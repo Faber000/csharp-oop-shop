@@ -1,5 +1,4 @@
 ﻿
-
 public class Water : Product
 {
     public double Liters { get; set; }
@@ -15,9 +14,10 @@ public class Water : Product
 
     public void Drink(double liters)
     {
-        if(this.Liters - liters > 0)
+        if(Liters - liters >= 0)
         {
-            this.Liters = this.Liters - liters;
+            Liters = Liters - liters;
+            Console.WriteLine("That's good!");
         } 
 
         else
@@ -31,6 +31,7 @@ public class Water : Product
         if(this.Liters + liters < 1.5)
         {
             this.Liters = this.Liters + liters;
+            Console.WriteLine("Correctly Filled!");
         } 
 
         else
@@ -42,6 +43,7 @@ public class Water : Product
     public void Empty(double liters)
     {
         this.Liters = 0;
+        Console.WriteLine("There's no water now");
     }
 
     public static double ToGallons(double liters)
@@ -50,7 +52,7 @@ public class Water : Product
     }
 
     public override string GetFullName() {
-        return base.GetFullName() + "Source: " + Source + ", Ph: " + Ph + ", Liters: " + Liters;
+        return base.GetFullName() + "\r\n Source: " + Source + ", Ph: " + Ph + ", Liters: " + Liters;
     }
 }
 
