@@ -1,10 +1,10 @@
 ﻿
 
-public class DomesticApplance : Product
+public class DomesticAppliance : Product
 {
     public string Type { get; set; }
 
-    public DomesticApplance(string name, string description, double price, string type) :base(name, description, price)
+    public DomesticAppliance(string name, string description, double price, string type) :base(name, description, price)
     {
         Type = type;
     }
